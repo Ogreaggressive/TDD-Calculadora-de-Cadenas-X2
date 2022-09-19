@@ -19,4 +19,7 @@ describe("Sumar", () => {
   it("reconoce guion como separador, sino da error", () => {
     expect(sumar("1-2,3-4")).toEqual(10);
   });
+  it("reconoce un delimitador dado por usuario", () => {
+    expect(sumar("//[#] 1#2,3#4")).toEqual(10);
+  });
 });

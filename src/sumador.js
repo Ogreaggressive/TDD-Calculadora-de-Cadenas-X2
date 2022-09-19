@@ -1,10 +1,34 @@
+let separadorCustom
+
+function compararSeparador(char)
+{
+  let pertenece = false
+  if (char == ",")
+  {
+    pertenece = true
+  }
+  if (char == "-"){
+    pertenece = true
+  }
+  if (char == " ")
+  {
+    pertenece = true
+  }
+  if (char == separadorCustom){
+    pertenece = true
+  }
+
+  return pertenece
+}
+
+
 function sumar(str) {
   if (str == null)
   {
     return 0
   }
   let tot = 0
-  for (var i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     let num = parseInt(str[i]);
     if (isNaN(str[i]) == false)
     {
@@ -12,10 +36,17 @@ function sumar(str) {
     }
     else
     {
-      if (str[i] != "," && str[i] != "-" )
+      if(str[i] == "/")
+      {
+         separadorCustom = str[i+3]
+         i += 5
+      }
+
+      if (compararSeparador(str[i]) == false)
       {
         return "cadena no valida"
       }
+
     }
   }
 
