@@ -10,7 +10,10 @@ describe("Sumar", () => {
   it("toma en cuenta 2 numeros", () => {
     expect(sumar("1,2")).toEqual(3);
   });
-  it("toma en cuenta 2 numeros", () => {
+  it("toma en cuenta muchos numeros numeros", () => {
     expect(sumar("1,2,3,4")).toEqual(10);
+  });
+  it("reconoce coma como separador, sino da error", () => {
+    expect(sumar("1%2,3,4")).toEqual("cadena no valida");
   });
 });

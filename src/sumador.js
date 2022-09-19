@@ -10,6 +10,13 @@ function sumar(str) {
     {
       tot = tot + num
     }
+    else
+    {
+      if (str[i] != ",")
+      {
+        return "cadena no valida"
+      }
+    }
   }
 
   return tot;
