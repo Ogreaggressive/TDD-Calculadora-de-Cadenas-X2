@@ -25,4 +25,7 @@ describe("Sumar", () => {
   it("numeros mayores a 1000 son ignorados", () => {
     expect(sumar("//[#] 1#2212,3#4")).toEqual(8);
   });
+  it("se puede usar delimitadores de cualquier longitud", () => {
+    expect(sumar("//[###] 1###2212,3###4")).toEqual(8);
+  });
 });

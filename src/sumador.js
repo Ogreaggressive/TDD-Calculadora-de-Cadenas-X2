@@ -3,12 +3,10 @@ let cadenas = [",","-"].join("|")
 
 function aumentarDelimitadores(str)
 {
-  const splitArr = str.split(" ");
-  var primerDelimitadorRegex = splitArr[0].toString();
-
-  let cadenaDelimitadores = primerDelimitadorRegex.substr(0, primerDelimitadorRegex.length-1);
-  let delim = cadenaDelimitadores.substr(-1, 1);
+  let cadenaDelimitadores = str.substr(0, str.length-1);
+  let delim = cadenaDelimitadores.substr(3, cadenaDelimitadores.length-3);
   return delim
+
 }
 
 function sumar(str) {
@@ -23,7 +21,7 @@ function sumar(str) {
   {
     const parteNumeros = str.split(" ");
     str = parteNumeros[1].toString();
-    cadenasUsuario = cadenas + "|" + aumentarDelimitadores(str)
+    cadenasUsuario = cadenas + "|" + aumentarDelimitadores(parteNumeros[0].toString())
   }
   else{
     cadenasUsuario = cadenas
@@ -40,7 +38,6 @@ function sumar(str) {
     {
       tot += num
     }
-    
   }
   return tot
 }
