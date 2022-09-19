@@ -12,7 +12,7 @@ function sumar(str) {
     }
     else
     {
-      if (str[i] != ",")
+      if (str[i] != "," && str[i] != "-" )
       {
         return "cadena no valida"
       }
