@@ -36,7 +36,11 @@ function sumar(str) {
       return "cadena no valida"
     }
     let num = parseInt(splitArr[i]);
-    tot += num
+    if(num <1000)
+    {
+      tot += num
+    }
+    
   }
   return tot
 }

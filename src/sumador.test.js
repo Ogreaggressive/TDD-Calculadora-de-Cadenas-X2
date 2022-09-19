@@ -22,4 +22,7 @@ describe("Sumar", () => {
   it("reconoce un delimitador dado por usuario", () => {
     expect(sumar("//[#] 1#2,3#4")).toEqual(10);
   });
+  it("numeros mayores a 1000 son ignorados", () => {
+    expect(sumar("//[#] 1#2212,3#4")).toEqual(8);
+  });
 });
