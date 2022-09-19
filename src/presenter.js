@@ -7,4 +7,5 @@ const res = document.querySelector("#resultado");
 
 button.addEventListener("submit", (event) => {
   event.preventDefault();
+  
 });
