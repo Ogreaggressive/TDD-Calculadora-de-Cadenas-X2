@@ -4,7 +4,7 @@ function sumar(str) {
     return 0
   }
   let tot = 0
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < str.length; i++) {
     let num = parseInt(str[i]);
     if (isNaN(str[i]) == false)
     {
