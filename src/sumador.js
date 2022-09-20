@@ -45,7 +45,6 @@ function sumar(str) {
   {
     return 0
   }
-
   let tot = 0
   str = cambiarCuantificadorRegex(str) //cambia el delimitador si tuviera un cuantificador no aceptable por regex
   let cadenasUsuario
