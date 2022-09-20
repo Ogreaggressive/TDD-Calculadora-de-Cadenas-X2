@@ -34,4 +34,7 @@ describe("Sumar", () => {
   it("se puede usar delimitadores de expresiones regulares con regex de cualquier longitud", () => {
     expect(sumar("//[***] 1***2212,3***4")).toEqual(8);
   });
+  it("se puede especificar multiples delimitadores", () => {
+    expect(sumar("//[***][#] 1***2212,3#4")).toEqual(8);
+  });
 });
